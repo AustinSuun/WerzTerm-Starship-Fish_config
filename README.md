@@ -1,5 +1,5 @@
-# WerzTerm-Starship-Fish_config
-My own terminal and shell configuration.Use WerzTerm+Starship+Fish
+# WezTerm-Starship-Fish_config
+My own terminal and shell configuration.Use WezTerm+Starship+Fish
 
 
 [English README](README_en.md)|[中文 README](README.md)
@@ -9,9 +9,9 @@ My own terminal and shell configuration.Use WerzTerm+Starship+Fish
 
 ## 介绍
 这是我自己的终端和shell配置，使用了
-[WerzTerm](https://wezfurlong.org/wezterm/) +
-[Starship](https://starship.rs/) +
-[Fish Shell](https://fishshell.com/)
+[WezTerm](https://github.com/wez/wezterm) +
+[Starship](https://github.com/starship/starship) +
+[Fish Shell](https://github.com/fish-shell/fish-shell)
 点击链接可以开始安装
 starship 主题使用了  [gruvbox-rainbow](https://starship.rs/zh-CN/presets/gruvbox-rainbow)
 ，并且增加了电量显示
