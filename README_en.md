@@ -1,5 +1,5 @@
-# WerzTerm-Starship-Fish_config
-My own terminal and shell configuration.Use WerzTerm+Starship+Fish
+# WezTerm-Starship-Fish_config
+My own terminal and shell configuration.Use WezTerm+Starship+Fish
 
 
 [English README](README_en.md)|[中文 README](README.md)
@@ -8,9 +8,9 @@ My own terminal and shell configuration.Use WerzTerm+Starship+Fish
 ![20250205135853](https://raw.githubusercontent.com/AustinSuun/image/main/img/20250205135853.png)
 
 ## introduce
-This is my own terminal and shell configuration.[WerzTerm](https://wezfurlong.org/wezterm/) +
-[Starship](https://starship.rs/) +
-[Fish Shell](https://fishshell.com/).
+This is my own terminal and shell configuration.[WezTerm](https://github.com/wez/wezterm) +
+[Starship](https://github.com/fish-shell/fish-shell) +
+[Fish Shell](https://github.com/starship/starship).
 Click the link to start installation
 
 Starship theme use  [gruvbox-rainbow](https://starship.rs/zh-CN/presets/gruvbox-rainbow)
