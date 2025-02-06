@@ -25,7 +25,7 @@ WerzTerm 使用 `Hack Nerd Font` 字体，增加了一些颜色配置，去除�
 
 - Starship: `/home/用户名/.config/starship.toml`
 
-- Fish: `/home/用户名/.config/fish/config.fish` __ps:__只需要在文件后面添加 `starship init fish | source`
+- Fish: `/home/用户名/.config/fish/config.fish`  __ps:__ 只需要在文件后面添加 `starship init fish | source`
 
 其他系统参考安装链接中的介绍，放置配置文件
 
