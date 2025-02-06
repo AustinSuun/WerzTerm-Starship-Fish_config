@@ -6,10 +6,6 @@ patch:
   # 以下根据自己所需自行定义，仅做参考。
   # 针对对应处方的定制条目，请使用 <recipe>.custom.yaml 中配置，例如 rime_ice.custom.yaml
   __patch:
-    style:
-      candidate_format: "[label] [candidate]  [comment]"
-      font_face: "SourceSans3VF-Roman, SourceHanSansKVF-Light, SourceHanSansVF-Light, SourceHanSansTCVF-Light, SourceHanSansSCVF-Light, PlangothicP1, PlangothicP2"
-      horizontal: true     # horizontal | vertical
 
     # 开启逗号句号翻页
     key_binder/bindings/+:
