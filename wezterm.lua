@@ -34,7 +34,10 @@ local theme = scheme_for_appearance(appearance)
 
 
 return {
-  font = wezterm.font("Hack Nerd Font"),
+  
+  initial_rows = 35,  -- 设置初始行数
+  initial_cols = 115, -- 设置初始列数
+  font = wezterm.font("Hack Nerd Font Mono"),
   font_size = 16.0,
   color_scheme = theme.color_scheme, -- 自动切换配色方案
 
