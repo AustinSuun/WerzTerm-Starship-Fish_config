@@ -94,11 +94,7 @@ return {
 
   default_cursor_style = "BlinkingBar", -- 默认方块光标（|）且闪烁
   
-  keys = {
-   
-    --第一次按 Esc → 记录状态，等待 0.5 秒。
-    --第二次按 Esc（0.5 秒内） → 直接退出 WezTerm。
-    --超过 0.5 秒不按，状态重置，不会退出
+--[[  keys = {
     {
       key = "Escape",
       mods = "",
@@ -117,5 +113,6 @@ return {
       end),
     },
   },
+  --]]
 }
 
