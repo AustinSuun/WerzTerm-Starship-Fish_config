@@ -106,7 +106,7 @@ return {
   window_decorations = "RESIZE",
 
   force_reverse_video_cursor = false,  -- 让鼠标不变样式
-  default_cursor_style = "BlinkingBlock", -- 让鼠标指针不变形
+  default_cursor_style = "BlinkingBar", -- 让鼠标指针不变形
 
   -- 双击 Esc 关闭功能
   keys = enable_escape_double_click_to_quit and {
