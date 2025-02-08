@@ -1,5 +1,8 @@
 local wezterm = require 'wezterm'
 
+-- 开关控制双击 Esc 关闭功能
+local enable_escape_double_click_to_quit = true  -- 设置为 true 启用，false 禁用
+
 -- 选择合适的配色
 local function scheme_for_appearance(appearance)
   if appearance:find("Dark") then
@@ -31,10 +34,24 @@ end
 local appearance = wezterm.gui.get_appearance()
 local theme = scheme_for_appearance(appearance)
 
-
+-- 双击 Esc 关闭功能
+local function double_click_esc_to_quit(window, pane)
+  if enable_escape_double_click_to_quit then
+    local overrides = window:get_config_overrides() or {}
+    if overrides.esc_pressed then
+      window:perform_action(wezterm.action.QuitApplication, pane)
+    else
+      overrides.esc_pressed = true
+      window:set_config_overrides(overrides)
+      wezterm.time.call_after(0.5, function()
+        overrides.esc_pressed = false
+        window:set_config_overrides(overrides)
+      end)
+    end
+  end
+end
 
 return {
-  
   initial_rows = 35,  -- 设置初始行数
   initial_cols = 115, -- 设置初始列数
   font = wezterm.font("Hack Nerd Font Mono"),
@@ -66,7 +83,6 @@ return {
         fg_color = '#ffffff',
       },
 
-
       -- 选中标签（深色模式下不变）
       active_tab = {
         bg_color = "#98c379",
@@ -86,33 +102,19 @@ return {
       },
     },
   },
-  
+
   window_decorations = "RESIZE",
 
   force_reverse_video_cursor = false,  -- 让鼠标不变样式
   default_cursor_style = "BlinkingBlock", -- 让鼠标指针不变形
 
-  default_cursor_style = "BlinkingBar", -- 默认方块光标（|）且闪烁
-  
---[[  keys = {
+  -- 双击 Esc 关闭功能
+  keys = enable_escape_double_click_to_quit and {
     {
       key = "Escape",
       mods = "",
-      action = wezterm.action_callback(function(window, pane)
-        local overrides = window:get_config_overrides() or {}
-        if overrides.esc_pressed then
-          window:perform_action(wezterm.action.QuitApplication, pane)
-        else
-          overrides.esc_pressed = true
-          window:set_config_overrides(overrides)
-          wezterm.time.call_after(0.5, function()
-            overrides.esc_pressed = false
-            window:set_config_overrides(overrides)
-          end)
-        end
-      end),
+      action = wezterm.action_callback(double_click_esc_to_quit),
     },
-  },
-  --]]
-}
+  } or {},
 
+}
