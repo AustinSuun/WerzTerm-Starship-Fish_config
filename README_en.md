@@ -25,7 +25,7 @@ After installing the software, put the configuration file in the corresponding d
 
 - Starship: `/home/username/.config/starship.toml`
 
-- Fish: `/home/username/.config/fish/config.fish`
+- Fish: `/home/username/.config/fish/config.fish`  PS: Just add starship init fish |at the end of the file source
 
 For other systems refer to the introduction in the installation link, place the configuration file
 
